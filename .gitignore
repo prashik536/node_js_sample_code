@@ -1,0 +1,35 @@
+node_modules/
+dist/
+
+apps/admin-ui/node_modules/
+apps/admin-ui/dist/
+apps/customer-ui/node_modules/
+apps/customer-ui/dist/
+apps/seller-ui/node_modules/
+apps/seller-ui/dist/
+services/notification-service/node_modules/
+services/notification-service/dist/
+services/auth-service/node_modules/
+services/auth-service/dist/
+services/catalog-service/node_modules/
+services/catalog-service/dist/
+services/order-service/node_modules/
+services/order-service/dist/
+services/delivery-service/node_modules/
+services/delivery-service/dist/
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
