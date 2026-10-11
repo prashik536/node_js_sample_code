@@ -5,7 +5,7 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/cloudkitchen_db',
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@database-1.cbim040e44mj.ap-south-1.rds.amazonaws.com:5432/postgres',
   ssl: process.env.DATABASE_URL?.includes('localhost') ? false : { rejectUnauthorized: false }
 });
 

@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 require('dotenv').config();
 
 async function main() {
-  const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/cloudkitchen_db';
+  const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:postgres@database-1.cbim040e44mj.ap-south-1.rds.amazonaws.com:5432/postgres';
   const client = new Client({ connectionString });
 
   try {
