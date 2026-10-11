@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API_BASE_URL } from '../config';
 
 export default function LoginPage({ onLogin, onGuestLogin, onSignupClick }) {
   const [formData, setFormData] = useState({
@@ -37,7 +38,7 @@ export default function LoginPage({ onLogin, onGuestLogin, onSignupClick }) {
     }
     setIsLoading(true);
 
-    fetch(`http://localhost:3001/auth/login`, {
+    fetch(`${API_BASE_URL}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

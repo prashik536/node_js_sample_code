@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API_BASE_URL } from '../config';
 
 export default function SignupPage({ onSignup, onBackToLogin }) {
   const [formData, setFormData] = useState({
@@ -52,7 +53,7 @@ export default function SignupPage({ onSignup, onBackToLogin }) {
     }
     setIsLoading(true);
 
-    fetch(`http://localhost:3001/auth/register`, {
+    fetch(`${API_BASE_URL}/auth/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
